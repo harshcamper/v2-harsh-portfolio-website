@@ -8,6 +8,7 @@ import { ProjectsSection } from "@/components/sections/projects-section"
 import { SkillsSection } from "@/components/sections/skills-section"
 import { ToolsSection } from "@/components/sections/tools-section"
 import { ContactSection } from "@/components/sections/contact-section"
+import { TopQuickMenu } from "@/components/top-quick-menu"
 
 export default function HomePage() {
   return (
@@ -32,6 +33,10 @@ export default function HomePage() {
         </div>
       </header>
 
+      {/* Quick menu */}
+      <TopQuickMenu />
+
+      {/* Sections */}
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
@@ -42,7 +47,7 @@ export default function HomePage() {
 
       <footer className="border-t border-border py-10">
         <div className="mx-auto max-w-6xl px-4 text-sm opacity-80">
-          <p>&copy; {new Date().getFullYear()} Harshit Govindarajan. Built with a lunar-inspired theme.</p>
+          <p>&copy; {new Date().getFullYear()} Harshit Govindarajan's Portfolio.</p>
         </div>
       </footer>
     </main>

@@ -5,12 +5,15 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 const LOGOS = [
-  { name: "Figma", src: "/figma-logo.png" },
-  { name: "Jira", src: "/jira-logo.png" },
-  { name: "Mixpanel", src: "/mixpanel-logo.png" },
-  { name: "Tableau", src: "/tableau-logo.png" },
-  { name: "Amplitude", src: "/amplitude-logo.png" },
-  { name: "Notion", src: "/notion-logo.png" },
+  { name: "Google Analytics", src: "/tools/google-analytics.png" },
+  { name: "Figma", src: "/tools/figma.svg" },
+  { name: "Jira", src: "/tools/jira.svg" },
+  { name: "Mixpanel", src: "/tools/mixpanel.svg" },
+  { name: "Miro", src: "/tools/miro.svg" },
+  { name: "Power BI", src: "/tools/powerbi.svg" },
+  { name: "Whimsical", src: "/tools/whimsical.jpg" },
+  { name: "CleverTap", src: "/tools/clevertap.jpg" },
+  { name: "Python", src: "/tools/python.svg" },
 ]
 
 export function ToolsSection() {
@@ -19,9 +22,7 @@ export function ToolsSection() {
       <div className="mx-auto max-w-6xl px-4">
         <ScrollReveal>
           <h2 className="text-2xl md:text-3xl font-semibold text-center">Tools</h2>
-          <p className="mt-3 opacity-80 text-center">
-            Platforms and instruments I use to craft, measure, and iterate.
-          </p>
+          <p className="mt-3 opacity-80 text-center">Platforms and instruments I use to craft, measure, and iterate.</p>
         </ScrollReveal>
 
         {/* Animated grid */}
@@ -62,7 +63,7 @@ export function ToolsSection() {
                 }}
                 transition={{
                   duration: 3,
-                  repeat: Infinity,
+                  repeat: Number.POSITIVE_INFINITY,
                   ease: "easeInOut",
                 }}
               >

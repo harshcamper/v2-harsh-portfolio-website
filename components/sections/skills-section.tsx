@@ -1,52 +1,57 @@
 "use client"
 
 import { ScrollReveal } from "@/components/scroll-reveal"
-import { Briefcase, BarChart3 } from "lucide-react"
 import { motion } from "framer-motion"
 
-const SKILLS = {
+// Skill categories with up to 9 rows max
+const SKILL_GROUPS = {
   "Product Management": [
     "Product Strategy",
     "Roadmapping",
-    "GTM",
-    "UI/UX",
+    "Project Management",
     "Stakeholder Management",
-    "Agile",
+    "Agile/Scrum/Waterfall",
     "PRDs & User Stories",
     "Hypothesis Testing",
     "Backlog Refinement",
-    "Prioritization",
-    "Design Thinking",
     "Wireframing & Prototyping",
   ],
   "Analytics & Research": [
     "Market Research",
     "A/B Testing",
     "Marketing Analytics",
-    "SEO/ASO",
+    "Competitor Analysis",
     "Mobile Analytics",
     "Gen AI",
     "Prompt Engineering",
+    "Customer Journey Mapping",
+    "Prioritization",
+  ],
+  Marketing: [
+    "Design Thinking",
+    "UI/UX",
+    "SEO/ASO",
+    "Growth Strategy",
+    "Customer Insights",
+    "User Segmentation",
+    "Campaign Optimization",
+    "Go-to-Market",
+    "Brand Positioning",
   ],
 }
 
-const ICONS: Record<string, any> = {
-  "Product Management": Briefcase,
-  "Analytics & Research": BarChart3,
-}
-
-// Animation variants for the domino effect
+// Domino animation variants
 const containerVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.12, // time gap between each pill
+      staggerChildren: 0.12,
     },
   },
 }
 
 const itemVariants = {
-  hidden: { opacity: 0, y: -20, rotate: -10 },
+  hidden: { opacity: 0, y: -20, rotate: -6 },
   show: {
     opacity: 1,
     y: 0,
@@ -54,7 +59,7 @@ const itemVariants = {
     transition: {
       type: "spring",
       stiffness: 500,
-      damping: 20,
+      damping: 22,
     },
   },
 }
@@ -66,47 +71,43 @@ export function SkillsSection() {
         <ScrollReveal className="text-center">
           <h2 className="text-2xl md:text-3xl font-semibold">Skills</h2>
           <p className="mt-3 opacity-80 max-w-prose mx-auto">
-            My expertise across product leadership and analytics to bring ideas to life.
+            Expertise across product management, analytics, and marketing to craft impactful solutions.
           </p>
         </ScrollReveal>
 
-        {/* Two-column skill cards */}
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {Object.entries(SKILLS).map(([category, items]) => {
-            const Icon = ICONS[category] || Briefcase
-            return (
-              <ScrollReveal
-                key={category}
-                className="rounded-2xl border border-border bg-background/60 p-6 backdrop-blur
-                           hover:border-sky-500/40 transition group"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <Icon className="h-5 w-5 text-sky-400" />
-                  <h3 className="font-semibold">{category}</h3>
-                </div>
+        {/* 3-column skills grid with headers */}
+        <div className="mt-14 grid gap-8 md:grid-cols-3">
+          {Object.entries(SKILL_GROUPS).map(([category, items]) => (
+            <ScrollReveal
+              key={category}
+              className="rounded-2xl border border-border bg-background/60 p-6 backdrop-blur
+                         hover:border-sky-500/40 transition group"
+            >
+              {/* Column header */}
+              <h3 className="mb-5 text-lg font-semibold text-sky-400">{category}</h3>
 
-                {/* Domino effect animation */}
-                <motion.div
-                  variants={containerVariants}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true }}
-                  className="grid gap-2"
-                >
-                  {items.map((skill) => (
-                    <motion.span
-                      key={skill}
-                      variants={itemVariants}
-                      className="rounded-md bg-black/30 px-3 py-2 text-sm opacity-90 
-                                 transition group-hover:bg-sky-500/10 group-hover:text-sky-200"
-                    >
-                      {skill}
-                    </motion.span>
-                  ))}
-                </motion.div>
-              </ScrollReveal>
-            )
-          })}
+              {/* Skills with domino animation */}
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="grid gap-2"
+              >
+                {items.map((skill) => (
+                  <motion.div
+                    key={skill}
+                    variants={itemVariants}
+                    className="rounded-md bg-black/30 px-3 py-2 text-sm opacity-90 
+                               transition hover:bg-sky-500/10 hover:text-sky-200
+                               hover:border hover:border-sky-500/40"
+                  >
+                    {skill}
+                  </motion.div>
+                ))}
+              </motion.div>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>
