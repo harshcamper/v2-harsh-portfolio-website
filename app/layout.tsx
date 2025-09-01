@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Harshit Govindarajan",
-  description: "Welcome to my portfolio",
+  description: "I ❤️ this quote.'You’ve got to start with the customer experience and work back toward the technology — not the other way around.'",
   generator: "Harshit's Portfolio",
 }
 
