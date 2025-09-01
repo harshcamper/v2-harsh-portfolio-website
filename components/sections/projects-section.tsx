@@ -14,20 +14,20 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    title: "B2C Influencer App",
+    title: "B2C Mobile App",
     summary:
-      "Scaled a consumer-facing influencer marketing app from MVP to 1M+ downloads with campaign management, AI-driven workflows, and engagement analytics.",
-    tags: ["B2C SaaS", "Influencer Marketing", "iOS", "Android", "AI Workflow"],
+      "Built a consumer-facing influencer marketing app from ideation to 1M+ downloads. Features included campaign management, Payment Wallet system, AI-driven workflows, and engagement analytics.",
+    tags: ["B2C", "Adtech", "Meta", "Flutter", "0-1", "Engagement", "iOS", "Android", "Cashfree", "Meta API", "Amplitude"],
     metrics: [
-      { value: "1M+", label: "Installs" },
-      { value: "88%", label: "Retention" },
+      { value: "1M+", label: "Downloads" },
+      { value: "90%+", label: "Retention" },
       { value: "100K+", label: "MAU" },
     ],
     image: "/case-studies/1.png",
-    link: "#",
+    link: "https://www.kofluence.com/influencer-marketing-for-digital-content-creators/",
   },
   {
-    title: "PayPal AR/AP Project",
+    title: "PayPal AR/AP Academic Project",
     summary:
       "Researched and prototyped an integrated Accounts Receivable & Payable solution for SMBs, streamlining cash flow and payment processes across markets.",
     tags: [
@@ -50,14 +50,14 @@ const PROJECTS: Project[] = [
     link: "#",
   },
   {
-    title: "B2B SaaS Platform",
+    title: "Swiggy Academic Project",
     summary:
-      "Directed development of a performance marketing SaaS platform (CPC, CPA, CPM) used by enterprises in EdTech, Retail, and CPG, generating recurring revenue.",
-    tags: ["B2B SaaS", "Performance Marketing", "Analytics", "Automation"],
+      "In this case study, I focused on solving meal indecisiveness and planning challenges for Swiggy users. My approach aimed at improving order rates and AOV while enhancing user satisfaction, thereby driving higher CLTV.",
+    tags: ["CaseStudy", "User Experience", "QuickCommerce", "Customer Journey", "Design Thinking", "AOV", "CLTV"],
     metrics: [
-      { value: "₹50Cr+", label: "ARR" },
-      { value: "30+", label: "Enterprise Clients" },
-      { value: "90%", label: "Campaign Effectiveness" },
+      { value: "Competition", label: "Project Type" },
+      { value: "Great Lakes", label: "Organiser" },
+      { value: "1st Place", label: "Achievement" },
     ],
     image: "/case-studies/3.png",
     link: "#",
@@ -117,7 +117,7 @@ export function ProjectsSection() {
                       className="inline-block mt-4 rounded-lg bg-sky-500 px-4 py-2 text-sm font-medium text-white 
                                  shadow-md transition hover:bg-sky-400 hover:shadow-lg"
                     >
-                      View Case Study →
+                      Explore More →
                     </a>
                   </div>
                 </div>
