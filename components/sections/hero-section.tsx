@@ -16,13 +16,11 @@ const audienceLabels: Record<Audience, string> = {
 }
 
 const audienceText: Record<Audience, string> = {
-   everyone: "Hello! I blend Product Management & Design Thinking to craft solutions that drive results.",
+  everyone: "Hello! I blend Product Management & Design Thinking to craft solutions that drive results.",
   recruiters: "Product Manager with 3+ years of experience leading both B2C and B2B products from 0→1 and scale.",
-  designers: "I prioritise high quality design collaboration — no last-minute design changes, I promise. 😉",
-  product:
-    "We’re alike in one way: we build with empathy, and we build to solve problems that matter 🌍",
-  engineers:
-    "I collaborate closely with engineering — clear PRDs, and crisp priorities. Let’s ship together 🚀",
+  designers: "I prioritise high quality design collaboration — no last-minute design changes, I promise 😇",
+  product: "We’re alike in one way: we build with empathy, and we build to solve problems that matter 🌍",
+  engineers: "I’m tech-savvy; while ≠ engineer, I built this site. After all, (Product) = (Function) + (Style)",
 }
 
 export function HeroSection() {
@@ -41,7 +39,10 @@ export function HeroSection() {
             <h1 className="sr-only">Portfolio Hero</h1>
 
             {/* Audience tabs */}
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium" role="tablist">
+            <div
+              className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium"
+              role="tablist"
+            >
               {(Object.keys(audienceLabels) as Audience[]).map((key) => {
                 const selected = active === key
                 return (
@@ -50,7 +51,11 @@ export function HeroSection() {
                     onClick={() => setActive(key)}
                     role="tab"
                     aria-selected={selected}
-                    className={`transition-colors ${selected ? "text-sky-400" : "text-foreground/60 hover:text-sky-400"}`}
+                    className={`transition-colors ${
+                      selected
+                        ? "text-sky-400"
+                        : "text-foreground/60 hover:text-sky-400"
+                    }`}
                   >
                     {audienceLabels[key]}
                   </button>
@@ -94,8 +99,13 @@ export function HeroSection() {
                 className="group rounded-full border-sky-500/40 text-sky-400 hover:bg-sky-500/10 px-6 py-5
                            transition-all hover:-translate-y-0.5 bg-transparent"
               >
-                <a href="/resume.pdf" download aria-label="Download Resume (PDF)">
-                  Download Resume
+                <a
+                  href="https://drive.google.com/file/d/1D-lZ8xnzoXQrLn8wIq3LACuyUycl6Ugn/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Resume on Google Drive"
+                >
+                  View Resume
                 </a>
               </Button>
             </div>
@@ -106,8 +116,14 @@ export function HeroSection() {
             <div className="relative mx-auto w-full max-w-sm">
               <div className="relative aspect-square">
                 {/* glow layers */}
-                <div aria-hidden className="pointer-events-none absolute inset-0 rounded-full bg-white/10 blur-2xl" />
-                <div aria-hidden className="pointer-events-none absolute inset-0 rounded-full ring-1 ring-white/20" />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 rounded-full bg-white/10 blur-2xl"
+                />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 rounded-full ring-1 ring-white/20"
+                />
                 <img
                   src="/images/harshit-profile.jpeg"
                   alt="Profile photo"

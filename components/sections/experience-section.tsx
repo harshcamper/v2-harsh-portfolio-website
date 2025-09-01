@@ -14,23 +14,22 @@ type ExpItem = {
 const EXPERIENCE: ExpItem[] = [
   {
     company: "Infosys Consulting",
-    role: "Senior Consultant, Product & Analytics",
-    period: "2022 — Present",
+    role: "Business Consultant - AiX",
+    period: "Jun'25 — Present",
     bullets: [
-      "Drove AI/analytics roadmap across multi-stakeholder programs",
-      "Shipped data-informed feature sets improving adoption and retention",
-      "Partnered with engineering to streamline delivery and reduce cycle time",
+      "Working as a Project Manager Lead for a leading CPG brand",
+      "Driving project worth $2M+, 10 initiatives across 5 MENAP regions with projected revenue impact of 20%",
     ],
     phase: "gibbous",
   },
   {
     company: "Kofluence",
-    role: "Product Manager",
-    period: "2020 — 2022",
+    role: "Product Owner",
+    period: "2020 — 2024",
     bullets: [
-      "Led influencer marketing platform initiatives from discovery to launch",
-      "Introduced experimentation loops, improving CTR and CPA",
-      "Scaled dashboards and reporting for enterprise clients",
+      "Scaled a B2C mobile app from MVP to 1.6M+ users with 1M+ downloads, 100K+ MAU, and 88% retention through data-driven feature development and GTM strategy.",
+      "Built and scaled a performance marketing SaaS platform by leading a 10-member cross-functional team and onboarding 30+ enterprise clients.",
+      "Strengthened customer engagement via automated omnichannel campaigns (WhatsApp, Email, Push), improving campaign effectiveness by 90%","Enhanced decision-making through unified leadership dashboards (Mixpanel, GA, Clevertap) and advanced CDP implementation enabling personalization & CLTV analytics.","Implemented CDP via mParticle, Mixpanel, and Clevertap, enabling advanced segmentation, RFM/CLTV analytics, and deep personalization. This supported targeted A/B experiments and marketing campaigns.",
     ],
     phase: "half",
   },

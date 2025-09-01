@@ -11,13 +11,13 @@ export function AboutSection() {
         </ScrollReveal>
         <ScrollReveal className="md:col-span-3 opacity-90">
           <p className="leading-relaxed">
-            I’m Harshit — a selenophile and builder who blends curiosity with disciplined product thinking. The moon’s
-            calm precision inspires my approach: clear strategy, considered experimentation, and execution that shines
+            I’m Harshit 👋 — a selenophile and a tech enthusiast who blends curiosity with disciplined product thinking. The moon’s
+            calm precision inspires my work approach: clear strategy, considered experimentation, and execution that shines
             when it matters.
           </p>
           <p className="leading-relaxed mt-4">
             I lead AI-driven initiatives with user empathy, aligning business outcomes with delightful experiences. I
-            believe great products are navigated like the night sky—anchored by principles, guided by patterns, and
+            believe great products are navigated like the night sky — anchored by principles, guided by patterns, and
             always exploring the edges.
           </p>
         </ScrollReveal>

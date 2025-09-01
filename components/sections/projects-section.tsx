@@ -47,7 +47,7 @@ const PROJECTS: Project[] = [
       { value: "Academic", label: "Project Type" },
     ],
     image: "/case-studies/2.png",
-    link: "#",
+    link: "https://drive.google.com/file/d/102x0dMVm0m7FSXiERtqqnNHBtLcefy2A/view?usp=sharing",
   },
   {
     title: "Swiggy Academic Project",
@@ -60,7 +60,7 @@ const PROJECTS: Project[] = [
       { value: "1st Place", label: "Achievement" },
     ],
     image: "/case-studies/3.png",
-    link: "#",
+    link: "https://drive.google.com/file/d/1bs29BgWiH7gxpvkQyL8BoQNXKa1ETZfX/view?usp=sharing",
   },
 ]
 
@@ -114,6 +114,8 @@ export function ProjectsSection() {
                   <div>
                     <a
                       href={p.link}
+                      target="_blank"
+                      rel="noreferrer"
                       className="inline-block mt-4 rounded-lg bg-sky-500 px-4 py-2 text-sm font-medium text-white 
                                  shadow-md transition hover:bg-sky-400 hover:shadow-lg"
                     >
